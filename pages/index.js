@@ -56,7 +56,7 @@ export default function Home() {
           <Chart data={data[choice]} />
         </div>
         <div className="h-[50vh] bg-blue-200">
-          <DetailStat data={data[choice]} />
+          <DetailStat data={data[choice]} room={choice} />
         </div>
       </div>
       <div className="bg-gradient-to-b from-violet-300 bg-indigo-300  h-[100vh] w-[60vw] flex flex-wrap justify-start overflow-auto">
