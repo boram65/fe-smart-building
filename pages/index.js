@@ -56,7 +56,7 @@ export default function Home() {
     <div className="flex flex-row w-screen h-full">
       <div className="bg-gradient-to-t from-violet-300 to-indigo-300 h-[100vh] w-[40vw]">
         <div className="h-[50vh] bg-gray-100 flex justify-center items-center">
-          <Chart data={dataChart} />
+          <Chart data={data[choice]} />
         </div>
         <div className="h-[50vh] bg-blue-200">
           <DetailStat data={data[choice]} />

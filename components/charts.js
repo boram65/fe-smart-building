@@ -2,10 +2,25 @@ import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 
 export default function charts(props) {
-  //console.log(props.data);
+  const [dataChart, setDataChart] = useState([{}]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {}, 5000);
+  }, []);
+  console.log(props.data);
 
   return (
-    <BarChart width={600} height={300} data={props.data}>
+    <BarChart
+      width={600}
+      height={300}
+      data={[
+        { name: "co2", uv: props.data.co2 },
+        { name: "hum", uv: props.data.hum },
+        { name: "lit", uv: props.data.lit },
+        { name: "pir", uv: props.data.pir },
+        { name: "tem", uv: props.data.tem },
+      ]}
+    >
       <XAxis dataKey="name" stroke="#8884d8" />
       <YAxis />
       <Tooltip />
