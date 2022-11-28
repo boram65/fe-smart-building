@@ -3,12 +3,11 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 
 export default function charts(props) {
   const [dataChart, setDataChart] = useState([{}]);
-
+  const [co2Data, setCo2Data] = useState([]);
   useEffect(() => {
     const timer = setInterval(() => {}, 5000);
   }, []);
   console.log(props.data);
-
   return (
     <BarChart
       width={600}

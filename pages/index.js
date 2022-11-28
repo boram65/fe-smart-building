@@ -12,13 +12,6 @@ export default function Home() {
 
   const detailData = Rnum => {
     setChoice(Rnum);
-    setDataChart([
-      { name: "co2", uv: data[Rnum].co2 },
-      { name: "hum", uv: data[Rnum].hum },
-      { name: "lit", uv: data[Rnum].lit },
-      { name: "pir", uv: data[Rnum].pir },
-      { name: "tem", uv: data[Rnum].tem },
-    ]);
   };
   //API호출
   const getAPI = () => {
