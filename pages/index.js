@@ -10,6 +10,8 @@ export default function Home() {
   const [choice, setChoice] = useState(0);
   const [dataChart, setDataChart] = useState([{}]);
 
+  const [dataCo2, setDataCo2] = useState([]);
+
   const detailData = Rnum => {
     setChoice(Rnum);
   };
@@ -41,6 +43,8 @@ export default function Home() {
     const timer = setInterval(() => {
       getAPI();
     }, 5000);
+
+    return () => clearInterval(timer);
   }, []);
 
   return ready !== true ? (

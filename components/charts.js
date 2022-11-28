@@ -5,9 +5,13 @@ export default function charts(props) {
   const [dataChart, setDataChart] = useState([{}]);
   const [co2Data, setCo2Data] = useState([]);
   useEffect(() => {
-    const timer = setInterval(() => {}, 5000);
+    const timer = setInterval(() => {
+      console.log(props.data.co2);
+    }, 5000);
+
+    return () => clearInterval(timer);
   }, []);
-  console.log(props.data);
+
   return (
     <BarChart
       width={600}
